@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Generator</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js" type="module"></script>
+</head>
+
+<body>
+	<form>
+		<input required class="narrow" type="number" name="year" placeholder="Rok">
+		<input required class="narrow" type="number" name="month" placeholder="Miesiąc" min="1" max="12">
+		<input required class="narrow" type="number" name="count" placeholder="Liczba tabelek" min="1">
+		<input required class="narrow" type="text" name="norm" placeholder="Norma">
+		<input required class="narrow" type="text" name="start" placeholder="Rozpoczęcie pracy"
+			pattern="^([01][0-9]|2[0-3]):([0-5][0-9])$">
+		<input required class="narrow" type="text" name="end" placeholder="Zakończenie pracy"
+			pattern="^([01][0-9]|2[0-3]):([0-5][0-9])$">
+		<input required class="wide" type="text" name="name" placeholder="Imię i nazwisko">
+		<input required class="wide" type="text" name="occupation" placeholder="Stanowisko">
+		<input type="submit" value="Generuj">
+	</form>
+
+	<div></div>
+
+	<table hidden>
+		<tr>
+			<th width="12%">Rok</th>
+			<th width="12%">Miesiąc</th>
+			<th width="12%">Norma</th>
+			<th width="32%">Imię i nazwisko</th>
+			<th width="32%">Stanowisko</th>
+		</tr>
+		<tr>
+			<td class="year"></td>
+			<td class="month"></td>
+			<td class="norm"></td>
+			<td class="name"></td>
+			<td class="occupation"></td>
+		</tr>
+		<tr>
+			<th>Dzień miesiąca</th>
+			<th>Rozpoczęcie pracy</th>
+			<th>Zakończenie pracy</th>
+			<th>Notatka</th>
+			<th>Podpis</th>
+		</tr>
+		<tr class="row">
+			<td class="day"></td>
+			<td><input class="start" type="text"></td>
+			<td><input class="end" type="text"></td>
+			<td><input type="text"></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+
+</html>
